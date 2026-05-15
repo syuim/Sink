@@ -45,6 +45,9 @@
       "bucket_name": "sink" // IMPORTANT: Change this to your R2 bucket name, or create one with `wrangler r2 bucket create sink`
     }
   ],
+"analytics_engine_datasets": [
+    { "binding": "sink", "dataset": "sink" }
+  ],
   "triggers": {
     "crons": ["0 0 * * *"] // Run backup task daily at 00:00 UTC
   }
